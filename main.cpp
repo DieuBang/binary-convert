@@ -30,13 +30,12 @@ int main()
         std::cout << "0. Exit\n";
         std::cout << "You choose: ";
         std::cin >> choice;
-        std::cin.ignore(256, '\n');
         while (choice > 16 || choice < 0 || std::cin.fail())
         {
-            cin.ignore('\n', 256);
+            std::cin.ignore(256, '\n');
             std::cout << "You choose: ";
             std::cin >> choice;
-            std::cin.ignore(256, '\n');
+ 
         }
         if (choice == 0)
         {
