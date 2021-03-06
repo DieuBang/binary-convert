@@ -117,14 +117,13 @@ int main()
             std::cout << "Your Double number: " << Double_dec(bin64) << '\n';
             break;
         }
-        std::cout << "\nContinue? (1 / 0)\n";
-        std::cout << "You choose: ";
+        std::cout << "\nContinue? (1 / 0): ";
         std::cin >> choice;
         std::cin.ignore(256, '\n');
         while (choice > 1 || choice < 0 || std::cin.fail())
         {
             cin.ignore('\n', 256);
-            std::cout << "You choose: ";
+            std::cout << "\nContinue? (1 / 0): ";
             std::cin >> choice;
             std::cin.ignore(256, '\n');
         }

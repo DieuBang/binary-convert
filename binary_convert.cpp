@@ -198,7 +198,7 @@ std::bitset<32> Float_bin(float dec)
     dec_tmp = dec;
     if (dec > 1)
     {
-        while (dec_tmp > 1)
+        while (!(dec_tmp < 1))
         {
             dec_tmp /= 2;
             ++count;
@@ -243,7 +243,7 @@ std::bitset<64> Double_bin(double dec)
     dec_tmp = dec;
     if (dec > 1)
     {
-        while (dec_tmp > 1)
+        while (!(dec_tmp < 1))
         {
             dec_tmp /= 2;
             ++count;
