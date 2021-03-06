@@ -30,11 +30,13 @@ int main()
         std::cout << "0. Exit\n";
         std::cout << "You choose: ";
         std::cin >> choice;
+        std::cin.ignore(256, '\n');
         while (choice > 16 || choice < 0 || std::cin.fail())
         {
             cin.ignore('\n', 256);
             std::cout << "You choose: ";
             std::cin >> choice;
+            std::cin.ignore(256, '\n');
         }
         if (choice == 0)
         {
@@ -70,52 +72,62 @@ int main()
         case 9:
             std::cout << "Enter your unsigned int number: ";
             std::cin >> dec_Uint;
+            std::cin.ignore(256, '\n');
             std::cout << "Your binary string: " << Unsigned_int_bin(dec_Uint) << '\n';
             break;
         case 10:
             std::cout << "Enter your Binary string: ";
             std::cin >> bin32;
+            std::cin.ignore(256, '\n');
             std::cout << "Your unsigned int number: " << Unsigned_int_dec(bin32) << '\n';
             break;
         case 11:
             std::cout << "Enter your signed int number: ";
             std::cin >> dec_Sint;
+            std::cin.ignore(256, '\n');
             std::cout << "Your binary string: " << Signed_int_bin(dec_Uint) << '\n';
             break;
         case 12:
             std::cout << "Enter your Binary string: ";
             std::cin >> bin32;
+            std::cin.ignore(256, '\n');
             std::cout << "Your signed int number: " << Signed_int_dec(bin32) << '\n';
             break;
         case 13:
             std::cout << "Enter your Float number: ";
             std::cin >> dec_Float;
+            std::cin.ignore(256, '\n');
             std::cout << "Your binary string: " << Float_bin(dec_Float) << '\n';
             break;
         case 14:
             std::cout << "Enter your Binary string: ";
             std::cin >> bin32;
+            std::cin.ignore(256, '\n');
             std::cout << "Your Float number: " << Float_dec(bin32) << '\n';
             break;
         case 15:
             std::cout << "Enter your Double number: ";
             std::cin >> dec_Double;
+            std::cin.ignore(256, '\n');
             std::cout << "Your binary string: " << Double_bin(dec_Double) << '\n';
             break;
         case 16:
             std::cout << "Enter your Binary string: ";
             std::cin >> bin64;
+            std::cin.ignore(256, '\n');
             std::cout << "Your Double number: " << Double_dec(bin64) << '\n';
             break;
         }
         std::cout << "\nContinue? (1 / 0)\n";
         std::cout << "You choose: ";
         std::cin >> choice;
+        std::cin.ignore(256, '\n');
         while (choice > 1 || choice < 0 || std::cin.fail())
         {
             cin.ignore('\n', 256);
             std::cout << "You choose: ";
             std::cin >> choice;
+            std::cin.ignore(256, '\n');
         }
         if (choice == 0)
         {

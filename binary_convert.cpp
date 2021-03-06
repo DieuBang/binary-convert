@@ -1,4 +1,5 @@
 #include "binary_convert.h"
+using namespace std;
 
 bool CheckString(string bin, int n)
 {
@@ -17,16 +18,20 @@ bool CheckString(string bin, int n)
 }
 string InputBinString(int n)
 {
+    cin.ignore(256, '\n');
     bool check = true;
     string bin;
     cout << "Insert your binary string: ";
     getline(cin, bin);
-    while (check || cin.fail())
+    check = CheckString(bin, n);
+    while (check == false || cin.fail())
     {
+        cin.ignore(256,'\n');
         cin.clear();
         cout << "Insert your binary string: ";
         getline(cin, bin);
         check = CheckString(bin, n);
+       
     }
     return bin;
 }
